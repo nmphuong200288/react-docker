@@ -33,7 +33,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - $SSH_KEY_FINGERPRINT
-            
       - run: sudo ssh -oStrictHostKeyChecking=no -v $DEPLOYED_USER@$DEPLOYED_SERVER './deploy.sh'
 workflows:
   my-pipeline:
